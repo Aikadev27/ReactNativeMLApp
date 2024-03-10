@@ -9,16 +9,18 @@ import PredictionHistory from "./screens/PredictionHistory";
 import { View, Text } from "react-native";
 import ModelDetail from "./screens/ModelDetail";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import ResultScreen from "./screens/ResultScreen";
 
 const Tab = createBottomTabNavigator();
 const Stack = createNativeStackNavigator();
+const tabFocusedColor = "#fb5607";
 
 const screenOptions = {
   tabBarShowLabel: false,
   headerShown: false,
 
   tabBarStyle: {
-    backgroundColor: "black",
+    backgroundColor: "#14213d",
     position: "absolute",
     bottom: 0,
     left: 0,
@@ -43,7 +45,7 @@ function TabNavigator() {
                 <MaterialIcons
                   name="history-edu"
                   size={iconSize}
-                  color={focused ? "cyan" : "white"}
+                  color={focused ? `${tabFocusedColor}` : "white"}
                 />
               </View>
             );
@@ -60,7 +62,7 @@ function TabNavigator() {
                 <AntDesign
                   name="home"
                   size={iconSize}
-                  color={focused ? "cyan" : "white"}
+                  color={focused ? `${tabFocusedColor}` : "white"}
                 />
               </View>
             );
@@ -77,7 +79,7 @@ function TabNavigator() {
                 <AntDesign
                   name="user"
                   size={iconSize}
-                  color={focused ? "cyan" : "white"}
+                  color={focused ? `${tabFocusedColor}` : "white"}
                 />
               </View>
             );
@@ -106,6 +108,7 @@ function StackNavigator() {
       <Stack.Screen name="profile" component={Profile} />
       <Stack.Screen name="history" component={PredictionHistory} />
       <Stack.Screen name="modelDetail" component={ModelDetail} />
+      <Stack.Screen name="resultScreen" component={ResultScreen} />
     </Stack.Navigator>
   );
 }

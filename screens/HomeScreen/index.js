@@ -45,7 +45,7 @@ export default function HomeScreen({ navigation }) {
   const [inputText, setInputText] = useState("");
 
   return (
-    <SafeAreaView className="h-full bg-stone-900 pb-16">
+    <SafeAreaView className="h-full bg-black pb-16">
       <ScrollView>
         {/* search bar */}
         <View className="mt-20 mx-5 flex flex-row  justify-start p-2 bg-white rounded-xl shadow">
@@ -105,7 +105,7 @@ export default function HomeScreen({ navigation }) {
         <View className="mx-2">
           {/* 2 text */}
           <View className="flex flex-row justify-between my-4 px-2 ">
-            <Text className="text-orange-600 text-sm font-bold">Features</Text>
+            <Text className="text-orange-600 text-sm font-bold">featured</Text>
             <Text className="text-white text-xs font-thin italic">
               Show all
             </Text>

@@ -14,7 +14,12 @@ export default function PopularModelCard({ modelName, imageUri, desc }) {
   return (
     <View className="w-[250] h-[300]  mx-1 bg-slate-800 rounded-md px-4 py-1">
       <TouchableOpacity
-        onPress={() => navigation.navigate("modelDetail")}
+        onPress={() =>
+          navigation.navigate("modelDetail", {
+            modelName: modelName,
+            desc: desc,
+          })
+        }
         className="w-full h-[65%] border my-2"
       >
         <View>
